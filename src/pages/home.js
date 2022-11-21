@@ -1,9 +1,14 @@
 import React from "react";
+import Button from "../components/home-components/button";
+import Header from "../components/header/header";
 
 function Home() {
   return (
     <>
-      <h1>this is the homepage</h1>
+      <Header />
+      <h1>Meal planning made easy</h1>
+      <h2>Plan your whole week with just a few clicks</h2>
+      <Button />
     </>
   );
 }
