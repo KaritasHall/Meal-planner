@@ -1,11 +1,14 @@
 import React from "react";
+import { RecipeCard, CardContainer, RecipeImg, RecipeTitle } from "./styles";
 
 function Card({ recipe }) {
   return (
-    <div>
-      <p>{recipe.strMeal}</p>
-      <img src={recipe.strMealThumb} />
-    </div>
+    <CardContainer>
+      <RecipeCard>
+        <RecipeTitle>{recipe.strMeal}</RecipeTitle>
+        <RecipeImg src={recipe.strMealThumb} />
+      </RecipeCard>
+    </CardContainer>
   );
 }
 

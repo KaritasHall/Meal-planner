@@ -16,7 +16,7 @@ function Recipes() {
     <>
       <h1>Explore delicious recipes!</h1>
       {recipes.map((recipe) => {
-        return <Card key={recipes.idMeal} recipe={recipe} />;
+        return <Card key={recipe.idMeal} recipe={recipe} />;
       })}
     </>
   );
