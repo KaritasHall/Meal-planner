@@ -1,0 +1,1 @@
+/* This card can also be used on the Recipes page */
