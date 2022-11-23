@@ -8,13 +8,21 @@ function Card({ recipe }) {
   const togglePopup = () => {
     setPopup(!popup);
   };
+
+  /* Used the solution from french guy. The "active-popup" class is used in index.css */
+  if (popup) {
+    document.body.classList.add("active-popup");
+  } else {
+    document.body.classList.remove("active-popup");
+  }
+
   return (
     <CardContainer>
       <RecipeCard onClick={togglePopup}>
         <RecipeTitle>{recipe.strMeal}</RecipeTitle>
         <RecipeImg src={recipe.strMealThumb} />
-        <PopupCard togglePopup={togglePopup} recipe={recipe} popup={popup} />
       </RecipeCard>
+      <PopupCard togglePopup={togglePopup} recipe={recipe} popup={popup} />
     </CardContainer>
   );
 }

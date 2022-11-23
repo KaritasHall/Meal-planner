@@ -34,22 +34,23 @@ export const PopupBackground = styled.div`
   z-index: 2;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const PopupRecipeCard = styled.div`
   position: relative;
   width: 70%;
   min-height: 300px;
+  max-height: 70%;
   background-color: #fff;
   border: 1px solid #999;
   border-radius: 4px;
   margin: 20px auto;
   padding: 20px;
-  overflow: auto;
+  overflow-y: auto;
 `;
 
 export const CloseButton = styled.button`
@@ -74,9 +75,7 @@ export const PopupRecipeImg = styled.img`
 
 export const PopupRecipeTitle = styled.h2``;
 
-
 export const PopupRecipeInstructions = styled.p`
   color: black;
   font-size: 16x;
 `;
-
