@@ -13,8 +13,8 @@ function Card({ recipe }) {
       <RecipeCard onClick={togglePopup}>
         <RecipeTitle>{recipe.strMeal}</RecipeTitle>
         <RecipeImg src={recipe.strMealThumb} />
+        <PopupCard togglePopup={togglePopup} recipe={recipe} popup={popup} />
       </RecipeCard>
-      <PopupCard togglePopup={togglePopup} recipe={recipe} popup={popup} />
     </CardContainer>
   );
 }

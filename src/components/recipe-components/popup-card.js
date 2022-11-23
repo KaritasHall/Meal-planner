@@ -6,6 +6,7 @@ import {
   PopupRecipeTitle,
   PopupRecipeImg,
   CloseButton,
+  PopupRecipeInstructions,
 } from "./styles";
 
 export default function PopupCard({ recipe, togglePopup, popup }) {
@@ -16,6 +17,7 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
         <CloseButton onClick={togglePopup}>x</CloseButton>
         <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
         <PopupRecipeImg src={recipe.strMealThumb} />
+        <PopupRecipeInstructions>{recipe.strInstructions}</PopupRecipeInstructions>
       </PopupRecipeCard>
     </PopupBackground>
   );
