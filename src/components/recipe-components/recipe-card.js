@@ -1,20 +1,22 @@
 import { RecipeCard, CardContainer, RecipeImg, RecipeTitle } from "./styles";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import PopupCard from "./popup-card";
 
 function Card({ recipe }) {
   const [popup, setPopup] = useState(false);
 
-  const togglePopup = () => {
+  const togglePopup = useCallback(() => {
     setPopup(!popup);
-  };
+  }, [popup]);
 
-  /* Used the solution from french guy. The "active-popup" class is used in index.css */
-  if (popup) {
-    document.body.classList.add("active-popup");
-  } else {
-    document.body.classList.remove("active-popup");
-  }
+  useEffect(() => {
+    /* Used the solution from french guy. The "active-popup" class is used in index.css */
+    if (popup) {
+      document.body.classList.add("active-popup");
+    } else {
+      document.body.classList.remove("active-popup");
+    }
+  }, [popup]);
 
   return (
     <CardContainer>

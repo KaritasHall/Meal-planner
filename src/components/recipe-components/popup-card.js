@@ -10,8 +10,8 @@ import {
   PopupRecipeInstructions,
 } from "./styles";
 
-/* Found a library (useOnClickOutside) that allows you to click outside modal to close it */
 export default function PopupCard({ recipe, togglePopup, popup }) {
+  /* Found a library (useOnClickOutside) that allows you to click outside modal to close it */
   const popupRecipeCardRef = useRef(null);
   useOnClickOutside(popupRecipeCardRef, togglePopup);
 
