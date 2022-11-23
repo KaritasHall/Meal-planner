@@ -8,19 +8,19 @@ function WeeklyOverview() {
       <h1>This is an overview of your week!</h1>
 
       <WeekdayTitle>Monday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="monday" />
       <WeekdayTitle>Tuesday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="tuesday" />
       <WeekdayTitle>Wednesday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="wednesday" />
       <WeekdayTitle>Thursday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="thursday" />
       <WeekdayTitle>Friday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="friday" />
       <WeekdayTitle>Saturday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="saturday" />
       <WeekdayTitle>Sunday</WeekdayTitle>
-      <EmptyCard />
+      <EmptyCard weekday="sunday" />
     </>
   );
 }

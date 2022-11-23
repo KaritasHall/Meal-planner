@@ -1,13 +1,20 @@
-import React from "react";
 import { RecipeCard, CardContainer, RecipeImg, RecipeTitle } from "./styles";
+import React, { useState } from "react";
+import PopupCard from "./popup-card";
 
 function Card({ recipe }) {
+  const [popup, setPopup] = useState(false);
+
+  const togglePopup = () => {
+    setPopup(!popup);
+  };
   return (
     <CardContainer>
-      <RecipeCard>
+      <RecipeCard onClick={togglePopup}>
         <RecipeTitle>{recipe.strMeal}</RecipeTitle>
         <RecipeImg src={recipe.strMealThumb} />
       </RecipeCard>
+      <PopupCard togglePopup={togglePopup} recipe={recipe} popup={popup} />
     </CardContainer>
   );
 }
