@@ -17,6 +17,18 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
 
   if (!popup) return null;
 
+  let IngredientsList = [];
+
+  for (let i = 1; i < 20; i++) {
+    if (recipe["strIngredient" + i]) {
+      IngredientsList.push(
+        <div>{`${recipe["strIngredient" + i]}, ${
+          recipe["strMeasure" + i]
+        }`}</div>
+      );
+    }
+  }
+
   return (
     <PopupBackground>
       <PopupRecipeCard ref={popupRecipeCardRef}>
@@ -26,6 +38,7 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
         <PopupRecipeInstructions>
           {recipe.strInstructions}
         </PopupRecipeInstructions>
+        <div>{IngredientsList}</div>
       </PopupRecipeCard>
     </PopupBackground>
   );
