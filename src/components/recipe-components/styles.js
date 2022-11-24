@@ -75,7 +75,22 @@ export const PopupRecipeImg = styled.img`
 
 export const PopupRecipeTitle = styled.h2``;
 
+export const PopupRecipeSubTitle = styled.h3``;
+
+
+export const PopupRecipeIngredients = styled.p`
+  color: black;
+  font-size: 16x;
+`;
+
 export const PopupRecipeInstructions = styled.p`
   color: black;
   font-size: 16x;
+`;
+
+export const PopupRecipeBtn = styled.button`
+  color: black;
+  font-weight: bold;
+  background-color: orange;
+  padding: 10px 20px;
 `;

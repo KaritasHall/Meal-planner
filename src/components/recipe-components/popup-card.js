@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import useOnClickOutside from "use-onclickoutside";
+import AddButton from "./add-button"
 
 import {
   PopupBackground,
@@ -8,6 +9,8 @@ import {
   PopupRecipeImg,
   CloseButton,
   PopupRecipeInstructions,
+  PopupRecipeIngredients,
+  PopupRecipeSubTitle,
 } from "./styles";
 
 export default function PopupCard({ recipe, togglePopup, popup }) {
@@ -22,7 +25,7 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
   for (let i = 1; i < 20; i++) {
     if (recipe["strIngredient" + i]) {
       IngredientsList.push(
-        <div>{`${recipe["strIngredient" + i]}, ${
+        <div>• {`${recipe["strIngredient" + i]}, ${
           recipe["strMeasure" + i]
         }`}</div>
       );
@@ -35,10 +38,15 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
         <CloseButton onClick={togglePopup}>x</CloseButton>
         <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
         <PopupRecipeImg src={recipe.strMealThumb} />
+        <PopupRecipeSubTitle>Ingredients</PopupRecipeSubTitle>
+        <PopupRecipeIngredients>
+          {IngredientsList}
+        </PopupRecipeIngredients>
+        <PopupRecipeSubTitle>Instructions</PopupRecipeSubTitle>
         <PopupRecipeInstructions>
           {recipe.strInstructions}
         </PopupRecipeInstructions>
-        <div>{IngredientsList}</div>
+        <AddButton />
       </PopupRecipeCard>
     </PopupBackground>
   );
