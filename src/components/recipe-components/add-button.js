@@ -1,8 +1,11 @@
 import React from "react";
-import {PopupRecipeBtn} from "./styles";
+import { PopupRecipeBtn } from "./styles";
+import { Link } from "react-router-dom";
 
 export default function AddButton() {
-    return(
-        <PopupRecipeBtn>Add</PopupRecipeBtn>
-    )
+  return (
+    <Link to="/weekly-overview">
+      <PopupRecipeBtn>Add</PopupRecipeBtn>
+    </Link>
+  );
 }

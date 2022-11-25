@@ -10,7 +10,7 @@ export default function EmptyCard({ weekday }) {
   return (
     <>
       <EmptyCardContainer>
-        <EmptyCardButtonLink to={`/recipes?day=${weekday}`}>
+        <EmptyCardButtonLink to={`/recipes/${weekday}`}>
           <EmptyCardButton>
             <EmptyCardButtonLabel>+</EmptyCardButtonLabel>
           </EmptyCardButton>

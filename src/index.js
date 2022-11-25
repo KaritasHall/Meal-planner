@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="recipes" element={<Recipes />} />
+          <Route path="recipes/:day" element={<Recipes />} />
           <Route path="weekly-overview" element={<WeeklyOverview />} />
           <Route path="shopping-list" element={<ShoppingList />} />
         </Route>

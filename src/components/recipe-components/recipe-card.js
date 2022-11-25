@@ -1,6 +1,7 @@
 import { RecipeCard, CardContainer, RecipeImg, RecipeTitle } from "./styles";
 import React, { useCallback, useEffect, useState } from "react";
 import PopupCard from "./popup-card";
+import { useParams } from "react-router-dom";
 
 function Card({ recipe }) {
   const [popup, setPopup] = useState(false);
@@ -17,6 +18,10 @@ function Card({ recipe }) {
       document.body.classList.remove("active-popup");
     }
   }, [popup]);
+
+  let { day } = useParams();
+
+  console.log(day);
 
   return (
     <CardContainer>
