@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import useOnClickOutside from "use-onclickoutside";
 import AddButton from "./add-button";
+import { Link } from "react-router-dom";
 
 import {
   PopupBackground,
@@ -32,7 +33,9 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
     }
   }
 
-  // const Day = localStorage.setItem({ weekday });
+  function handleClick() {
+    localStorage.setItem("recipeId", recipe.idMeal);
+  }
 
   /* Get the day from props, add onClick to Addbutton, work with an object like this: 
   {
@@ -52,8 +55,9 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
         <PopupRecipeInstructions>
           {recipe.strInstructions}
         </PopupRecipeInstructions>
-
-        <AddButton />
+        <Link to="/weekly-overview">
+          <AddButton onClick={handleClick} />
+        </Link>
       </PopupRecipeCard>
     </PopupBackground>
   );

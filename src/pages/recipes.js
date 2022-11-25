@@ -5,7 +5,7 @@ function Recipes() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch("https://themealdb.com/api/json/v1/1/search.php?s=")
+    fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=c")
       .then((res) => res.json())
       .then((data) => {
         setRecipes(data.meals);
