@@ -29,7 +29,12 @@ function Card({ recipe }) {
         <RecipeTitle>{recipe.strMeal}</RecipeTitle>
         <RecipeImg src={recipe.strMealThumb} />
       </RecipeCard>
-      <PopupCard togglePopup={togglePopup} recipe={recipe} popup={popup} />
+      <PopupCard
+        togglePopup={togglePopup}
+        recipe={recipe}
+        popup={popup}
+        day={day}
+      />
     </CardContainer>
   );
 }

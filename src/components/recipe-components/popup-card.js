@@ -14,7 +14,7 @@ import {
   PopupRecipeSubTitle,
 } from "./styles";
 
-export default function PopupCard({ recipe, togglePopup, popup }) {
+export default function PopupCard({ recipe, togglePopup, popup, day }) {
   /* Found a library (useOnClickOutside) that allows you to click outside modal to close it */
   const popupRecipeCardRef = useRef(null);
   useOnClickOutside(popupRecipeCardRef, togglePopup);
@@ -34,7 +34,8 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
   }
 
   function handleClick() {
-    localStorage.setItem("recipeId", recipe.idMeal);
+    console.log("hæ");
+    localStorage.setItem(day, recipe.idMeal);
   }
 
   /* Get the day from props, add onClick to Addbutton, work with an object like this: 
@@ -55,8 +56,8 @@ export default function PopupCard({ recipe, togglePopup, popup }) {
         <PopupRecipeInstructions>
           {recipe.strInstructions}
         </PopupRecipeInstructions>
-        <Link to="/weekly-overview">
-          <AddButton onClick={handleClick} />
+        <Link to="/weekly-overview" onClick={handleClick}>
+          <AddButton />
         </Link>
       </PopupRecipeCard>
     </PopupBackground>
