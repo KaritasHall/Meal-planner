@@ -1,5 +1,5 @@
 import React from "react";
-import EmptyCard from "../components/weekly-components/empty-card";
+import WeekdayCard from "../components/weekly-components/weekday-card";
 import { WeekdayTitle } from "../components/weekly-components/styles";
 
 function WeeklyOverview() {
@@ -8,19 +8,19 @@ function WeeklyOverview() {
       <h1>This is an overview of your week!</h1>
 
       <WeekdayTitle>Monday</WeekdayTitle>
-      <EmptyCard weekday="monday" />
+      <WeekdayCard weekday="monday" />
       <WeekdayTitle>Tuesday</WeekdayTitle>
-      <EmptyCard weekday="tuesday" />
+      <WeekdayCard weekday="tuesday" />
       <WeekdayTitle>Wednesday</WeekdayTitle>
-      <EmptyCard weekday="wednesday" />
+      <WeekdayCard weekday="wednesday" />
       <WeekdayTitle>Thursday</WeekdayTitle>
-      <EmptyCard weekday="thursday" />
+      <WeekdayCard weekday="thursday" />
       <WeekdayTitle>Friday</WeekdayTitle>
-      <EmptyCard weekday="friday" />
+      <WeekdayCard weekday="friday" />
       <WeekdayTitle>Saturday</WeekdayTitle>
-      <EmptyCard weekday="saturday" />
+      <WeekdayCard weekday="saturday" />
       <WeekdayTitle>Sunday</WeekdayTitle>
-      <EmptyCard weekday="sunday" />
+      <WeekdayCard weekday="sunday" />
     </>
   );
 }

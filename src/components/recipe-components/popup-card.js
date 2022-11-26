@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import useOnClickOutside from "use-onclickoutside";
-import AddButton from "./add-button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   PopupBackground,
@@ -12,12 +11,25 @@ import {
   PopupRecipeInstructions,
   PopupRecipeIngredients,
   PopupRecipeSubTitle,
+  AddButton,
 } from "./styles";
 
-export default function PopupCard({ recipe, togglePopup, popup, day }) {
+export default function PopupCard({
+  recipe,
+  togglePopup,
+  popup,
+  day,
+  hasRemove,
+}) {
   /* Found a library (useOnClickOutside) that allows you to click outside modal to close it */
   const popupRecipeCardRef = useRef(null);
   useOnClickOutside(popupRecipeCardRef, togglePopup);
+
+  /* useNavigate allows you to redirect to another path with javascript.
+  https://reactrouter.com/en/main/hooks/use-navigate
+  See usage in the handleClick function
+  */
+  const navigate = useNavigate();
 
   if (!popup) return null;
 
@@ -32,17 +44,20 @@ export default function PopupCard({ recipe, togglePopup, popup, day }) {
       );
     }
   }
-
+  /* Expanded the handleClick to have two versions - Add and Remove
+  I also had to take the Link off the AddButton and use useNavigate here to properly
+  reuse the Ppopup card component. In the previous version it had a hardcorded single
+  destination (weekly-overview) */
   function handleClick() {
-    console.log("hæ");
-    localStorage.setItem(day, recipe.idMeal);
+    if (hasRemove) {
+      // Because we are deleting, the value is irrelevant (idMeal)
+      localStorage.removeItem(day);
+      navigate(0); //refreshes page
+    } else {
+      localStorage.setItem(day, recipe.idMeal);
+      navigate("/weekly-overview");
+    }
   }
-
-  /* Get the day from props, add onClick to Addbutton, work with an object like this: 
-  {
-    monday: recipe
-  }
-  */
 
   return (
     <PopupBackground>
@@ -56,9 +71,10 @@ export default function PopupCard({ recipe, togglePopup, popup, day }) {
         <PopupRecipeInstructions>
           {recipe.strInstructions}
         </PopupRecipeInstructions>
-        <Link to="/weekly-overview" onClick={handleClick}>
-          <AddButton />
-        </Link>
+        {/* Button has either Add or Remove depending on if hasRemove is true/false */}
+        <AddButton onClick={handleClick}>
+          {hasRemove ? "Remove" : "Add"}
+        </AddButton>
       </PopupRecipeCard>
     </PopupBackground>
   );
