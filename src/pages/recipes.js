@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/recipe-components/recipe-card";
+import { RecipePageHeadline } from "../components/recipe-components/styles";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
@@ -14,7 +15,7 @@ function Recipes() {
 
   return (
     <>
-      <h1>Explore delicious recipes!</h1>
+      <RecipePageHeadline>Recipes</RecipePageHeadline>
       {recipes.map((recipe) => {
         return <Card key={recipe.idMeal} recipe={recipe} />;
       })}

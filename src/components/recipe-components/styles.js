@@ -3,14 +3,15 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const RecipeCard = styled.div`
   width: 300px;
   height: 170px;
-  border: 2px solid black;
-  margin-bottom: 18px;
+  margin-bottom: 35px;
   border-radius: 10px;
+  box-shadow: 1px 1px 5px #CDCDCD;
 `;
 
 export const RecipeImg = styled.img`
@@ -22,12 +23,23 @@ export const RecipeImg = styled.img`
   object-fit: cover;
 `;
 
+export const TitleBackground = styled.div`
+  z-index: 1;
+  width: 300px;
+  height: 40px;
+  background: #FE6532;
+  position: absolute;
+  margin-top: 130px;
+  border-radius: 0 0 8px 8px;
+`;
+
 export const RecipeTitle = styled.h2`
   z-index: 1;
   position: absolute;
-  margin-left: 3px;
-  background-color: rgba(255, 122, 89, 0.8);
+  margin: 0;
   padding: 8px;
+  color: white;
+  font-size: 18px;
 `;
 
 export const PopupBackground = styled.div`
@@ -92,4 +104,12 @@ export const AddButton = styled.button`
   font-weight: bold;
   background-color: orange;
   padding: 10px 20px;
+`;
+
+export const RecipePageHeadline = styled.h1`
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 45px 0 50px 0;
 `;
