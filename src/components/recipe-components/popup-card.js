@@ -8,10 +8,12 @@ import {
   PopupRecipeTitle,
   PopupRecipeImg,
   CloseButton,
+  PopupRecipeTextContent,
   PopupRecipeInstructions,
   PopupRecipeIngredients,
   PopupRecipeSubTitle,
   AddButton,
+  PopupRecipeHeader,
 } from "./styles";
 
 export default function PopupCard({
@@ -40,7 +42,7 @@ export default function PopupCard({
     if (recipe["strIngredient" + i]) {
       IngredientsList.push(
         <div>
-          {`${recipe["strIngredient" + i]}, ${recipe["strMeasure" + i]}`}
+          • {`${recipe["strIngredient" + i]}, ${recipe["strMeasure" + i]}`}
         </div>
       );
     }
@@ -64,15 +66,19 @@ export default function PopupCard({
   return (
     <PopupBackground>
       <PopupRecipeCard ref={popupRecipeCardRef}>
+        <PopupRecipeHeader>
         <CloseButton onClick={togglePopup}>x</CloseButton>
-        <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
+        </PopupRecipeHeader>
         <PopupRecipeImg src={recipe.strMealThumb} />
+        <PopupRecipeTextContent>
+        <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
         <PopupRecipeSubTitle>Ingredients</PopupRecipeSubTitle>
         <PopupRecipeIngredients>{IngredientsList}</PopupRecipeIngredients>
         <PopupRecipeSubTitle>Instructions</PopupRecipeSubTitle>
         <PopupRecipeInstructions>
           {recipe.strInstructions}
         </PopupRecipeInstructions>
+        </PopupRecipeTextContent>
         {/* Button has either Add or Remove depending on if hasRemove is true/false */}
         <AddButton onClick={handleClick}>
           {hasRemove ? "Remove" : "Add"}
