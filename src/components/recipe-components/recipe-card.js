@@ -1,4 +1,4 @@
-import { RecipeCard, CardContainer, RecipeImg, RecipeTitle } from "./styles";
+import { RecipeCard, CardContainer, RecipeImg, RecipeTitle, TitleBackground } from "./styles";
 import React, { useCallback, useEffect, useState } from "react";
 import PopupCard from "./popup-card";
 import { useParams } from "react-router-dom";
@@ -26,7 +26,9 @@ function Card({ recipe, hasRemove = false }) {
   return (
     <CardContainer>
       <RecipeCard onClick={togglePopup}>
-        <RecipeTitle>{recipe.strMeal}</RecipeTitle>
+        <TitleBackground>
+          <RecipeTitle>{recipe.strMeal}</RecipeTitle>
+        </TitleBackground>
         <RecipeImg src={recipe.strMealThumb} />
       </RecipeCard>
       <PopupCard
