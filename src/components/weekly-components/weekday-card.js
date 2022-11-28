@@ -36,7 +36,7 @@ export default function WeekdayCard({ weekday }) {
   if (meal) {
     return (
       <Link to={`/weekly-overview/${weekday}`}>
-        <Card recipe={meal} hasRemove={true} weekday={weekday} />{" "}
+        <Card recipe={meal} hasRemove={true} />
       </Link>
     );
   }

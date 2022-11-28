@@ -33,8 +33,9 @@ export default function PopupCard({
 
   if (!popup) return null;
 
-  let IngredientsList = [];
+  const IngredientsList = [];
 
+  // Should this be a useState, so it will render only once?
   for (let i = 1; i < 20; i++) {
     if (recipe["strIngredient" + i]) {
       IngredientsList.push(
@@ -44,6 +45,7 @@ export default function PopupCard({
       );
     }
   }
+
   /* Expanded the handleClick to have two versions - Add and Remove
   I also had to take the Link off the AddButton and use useNavigate here to properly
   reuse the Ppopup card component. In the previous version it had a hardcorded single
