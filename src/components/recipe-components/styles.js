@@ -6,6 +6,14 @@ export const CardContainer = styled.div`
   position: relative;
 `;
 
+export const RecipePageHeadline = styled.h1`
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 45px 0 50px 0;
+`;
+
 export const RecipeCard = styled.div`
   width: 300px;
   height: 170px;
@@ -54,15 +62,24 @@ export const PopupBackground = styled.div`
 
 export const PopupRecipeCard = styled.div`
   position: relative;
-  width: 70%;
+  width: 75%;
   min-height: 300px;
   max-height: 70%;
   background-color: #fff;
   border: 1px solid #999;
   border-radius: 4px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   overflow-y: auto;
+`;
+
+export const PopupRecipeHeader = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: white;
+  width: 285px;
+  height: 40px;
 `;
 
 export const CloseButton = styled.button`
@@ -77,39 +94,56 @@ export const CloseButton = styled.button`
 `;
 
 export const PopupRecipeImg = styled.img`
-  border: 1px solid black;
-  width: 250px;
-  height: 150px;
-  position: relative;
-  border-radius: 8px;
+  width: 265px;
+  height: 170px;
   object-fit: cover;
+  border-left: 6px solid #FE6532;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
 `;
 
-export const PopupRecipeTitle = styled.h2``;
+export const PopupRecipeTextContent = styled.p`
+  width: 260px;
+  margin: auto;
+`;
 
-export const PopupRecipeSubTitle = styled.h3``;
+export const PopupRecipeTitle = styled.h2`
+  font-size: 18px;
+  color: var(--primary-darkblue);
+  margin: 20px 0 25px 0;
+`;
+
+export const PopupRecipeSubTitle = styled.h3`
+  font-size: 16px;
+  color: var(--primary-orange);
+  margin-top: 25px;
+  margin-bottom: 0px;
+`;
 
 export const PopupRecipeIngredients = styled.p`
   color: black;
-  font-size: 16x;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 25px;
 `;
 
 export const PopupRecipeInstructions = styled.p`
   color: black;
-  font-size: 16x;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 20px;
 `;
 
 export const AddButton = styled.button`
-  color: black;
+  color: white;
   font-weight: bold;
-  background-color: orange;
-  padding: 10px 20px;
+  background-color: var(--primary-darkblue);
+  padding: 10px 40px;
+  border: none;
+  border-radius: 4px;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
 `;
 
-export const RecipePageHeadline = styled.h1`
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 45px 0 50px 0;
-`;
