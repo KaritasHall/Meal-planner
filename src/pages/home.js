@@ -1,14 +1,30 @@
 import React from "react";
 import Button from "../components/home-components/button";
 import Header from "../components/header/header";
+import {
+  LandingTitle,
+  LandingSubtitle,
+  LandingParagraph,
+  LandingSection,
+  AboutSection,
+  AboutTitle,
+} from "../components/home-components/styles";
 
 function Home() {
   return (
     <>
-      <Header />
-      <h1>Meal planning made easy</h1>
-      <h2>Plan your whole week with just a few clicks</h2>
-      <Button />
+      <LandingSection>
+        <Header />
+        <LandingTitle>Meal planning</LandingTitle>
+        <LandingSubtitle>made easy</LandingSubtitle>
+        <LandingParagraph>
+          Plan your whole week with just a few clicks!
+        </LandingParagraph>
+        <Button />
+      </LandingSection>
+      <AboutSection>
+        <AboutTitle>Get Started</AboutTitle>
+      </AboutSection>
     </>
   );
 }

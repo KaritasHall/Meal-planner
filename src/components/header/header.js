@@ -1,12 +1,12 @@
 import React from "react";
-import onion from "../onion.png";
-import { Logo, Image, Heading } from "./styles";
+import { Heading, HeaderContainer } from "./styles";
 
 export default function Header() {
   return (
-    <Logo>
-      <Heading>PEEL</Heading>
-      <Image src={onion} alt="onion logo" />
-    </Logo>
+    <>
+      <HeaderContainer>
+        <Heading>PEEL</Heading>
+      </HeaderContainer>
+    </>
   );
 }
