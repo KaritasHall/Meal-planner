@@ -1,11 +1,11 @@
 import React from "react";
 import WeekdayCard from "../components/weekly-components/weekday-card";
-import { WeekdayTitle } from "../components/weekly-components/styles";
+import { WeekdayTitle, WeeklyOverviewPageHeadline } from "../components/weekly-components/styles";
 
 function WeeklyOverview() {
   return (
     <>
-      <h1>This is an overview of your week!</h1>
+      <WeeklyOverviewPageHeadline>Weekly overview</WeeklyOverviewPageHeadline>
 
       <WeekdayTitle>Monday</WeekdayTitle>
       <WeekdayCard weekday="monday" />
