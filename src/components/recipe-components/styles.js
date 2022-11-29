@@ -71,13 +71,14 @@ export const PopupRecipeCard = styled.div`
   margin: 20px auto;
   padding: 0 20px 20px 20px;
   overflow-y: auto;
+  box-shadow: inset 0 -40px 0 rgba(255, 255, 255, 0.9);
 `;
 
 export const PopupRecipeHeader = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   width: 285px;
   height: 40px;
 `;
