@@ -9,6 +9,8 @@
 
 * {
   margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,4 +23,23 @@ body {
 
 body.active-popup {
   overflow: hidden;
+}
+
+.with-gutter {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .with-gutter {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .with-gutter {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }

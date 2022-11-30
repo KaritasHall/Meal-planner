@@ -4,7 +4,7 @@ import { Heading, HeaderContainer } from "./styles";
 export default function Header() {
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer className="with-gutter">
         <Heading>PEEL</Heading>
       </HeaderContainer>
     </>
