@@ -17,9 +17,14 @@ export const RecipePageHeadline = styled.h1`
 export const RecipeCard = styled.div`
   width: 300px;
   height: 170px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #CDCDCD;
+  @media only screen and (min-width: 1600px) {
+    width: 450px;
+    height: 320px;
+    margin-bottom: 80px;
+    }
 `;
 
 export const RecipeImg = styled.img`
@@ -29,6 +34,10 @@ export const RecipeImg = styled.img`
   position: relative;
   border-radius: 8px;
   object-fit: cover;
+  @media only screen and (min-width: 1600px) {
+    width: 450px;
+    height: 320px;
+    }
 `;
 
 export const TitleBackground = styled.div`
@@ -39,6 +48,12 @@ export const TitleBackground = styled.div`
   position: absolute;
   margin-top: 130px;
   border-radius: 0 0 8px 8px;
+  @media only screen and (min-width: 1600px) {
+    width: 450px;
+    height: 50px;
+    margin-top: 270px;
+
+    }
 `;
 
 export const RecipeTitle = styled.h2`
@@ -48,6 +63,10 @@ export const RecipeTitle = styled.h2`
   padding: 8px;
   color: white;
   font-size: 18px;
+  @media only screen and (min-width: 1600px) {
+    font-size: 24px;
+    padding: 9px 0 0px 12px;
+    }
 `;
 
 export const PopupBackground = styled.div`

@@ -2,6 +2,7 @@ import { RecipeCard, CardContainer, RecipeImg, RecipeTitle, TitleBackground } fr
 import React, { useCallback, useEffect, useState } from "react";
 import PopupCard from "./popup-card";
 import { useParams } from "react-router-dom";
+import "./styles.css"
 
 /* hasRemove has the default value of false, which allows us to use it optionally.
 This will be used later to make Popup card reusable, and flip between Add/Remove*/
