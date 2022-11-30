@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/recipe-components/recipe-card";
 import { RecipePageHeadline } from "../components/recipe-components/styles";
+import "../components/recipe-components/styles.css"
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
@@ -16,9 +17,11 @@ function Recipes() {
   return (
     <>
       <RecipePageHeadline>Recipes</RecipePageHeadline>
+      <div id="container">
       {recipes.map((recipe) => {
         return <Card key={recipe.idMeal} recipe={recipe} />;
       })}
+      </div>
     </>
   );
 }

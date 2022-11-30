@@ -9,7 +9,13 @@ export const EmptyCardContainer = styled.div`
   background-color: #eaf5ff;
   margin: auto;
   display: flex;
-  box-shadow: 1px 1px 5px #cdcdcd;
+
+  box-shadow: 1px 1px 5px #CDCDCD;
+  margin-bottom: 40px;
+  @media only screen and (min-width: 1600px) {
+    width: 450px;
+    height: 320px;
+    }
 `;
 
 export const EmptyCardButton = styled.button`
@@ -17,7 +23,13 @@ export const EmptyCardButton = styled.button`
   height: 80px;
   border: 1px solid #02195a;
   border-radius: 50%;
-  background-color: #02195a;
+
+  background-color: #02195A;
+  @media only screen and (min-width: 1600px) {
+    width: 130px;
+    height: 130px;
+    }
+
 `;
 
 export const EmptyCardButtonLabel = styled.h1`
@@ -27,6 +39,9 @@ export const EmptyCardButtonLabel = styled.h1`
   line-height: 0px;
   text-decoration: none;
   margin: 0px;
+  @media only screen and (min-width: 1600px) {
+    font-size: 100px;
+    }
 `;
 
 export const EmptyCardButtonLink = styled(Link)`
@@ -36,17 +51,38 @@ export const EmptyCardButtonLink = styled(Link)`
   text-decoration: none;
 `;
 
+export const WeekdayTitleContainer = styled.div`
+  margin: auto;
+  margin-bottom: 6px;
+  width: 300px;
+  text-align: left;
+  @media only screen and (min-width: 1600px) {
+    width: 450px;
+    }
+`;
+
 export const WeekdayTitle = styled.h2`
   color: black;
   font-size: 16px;
-  margin: 32px 0 6px 45px;
   text-transform: uppercase;
+  padding-left: 3px;
+  @media only screen and (min-width: 1600px) {
+    font-size: 24px;
+    }
 `;
 
 export const WeeklyOverviewPageHeadline = styled.h1`
-  color: black;
-  font-size: 20px;
+  color: white;
+  font-size: 24px;
   text-align: center;
   text-transform: uppercase;
-  margin: 45px 0 50px 0;
+  line-height: 100px;
+`;
+
+export const WeeklyOverviewPageHeader = styled.div`
+  background: var(--primary-orange);
+  width: 100%;
+  height: 100px;
+  border-bottom: 7px solid var(--primary-lightblue);
+  margin-bottom: 50px;
 `;
