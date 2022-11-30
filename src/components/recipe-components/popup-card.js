@@ -9,11 +9,16 @@ import {
   PopupRecipeImg,
   CloseButton,
   PopupRecipeTextContent,
+  PopupRecipeTitleContainer,
+  PopupRecipeIngredientsTitle,
+  PopupRecipeInstructionsTitle,
+  PopupRecipeConcent,
   PopupRecipeInstructions,
   PopupRecipeIngredients,
-  PopupRecipeSubTitle,
   AddButton,
   PopupRecipeHeader,
+  PopupRecipeIngredientsContainer,
+  PopupRecipeInstructionsContainer,
 } from "./styles";
 
 export default function PopupCard({
@@ -71,13 +76,19 @@ export default function PopupCard({
         </PopupRecipeHeader>
         <PopupRecipeImg src={recipe.strMealThumb} />
         <PopupRecipeTextContent>
+          <PopupRecipeTitleContainer>
         <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
-        <PopupRecipeSubTitle>Ingredients</PopupRecipeSubTitle>
+          </PopupRecipeTitleContainer>
+          <PopupRecipeConcent>
+            <PopupRecipeIngredientsContainer>
+        <PopupRecipeIngredientsTitle>Ingredients</PopupRecipeIngredientsTitle>
         <PopupRecipeIngredients>{IngredientsList}</PopupRecipeIngredients>
-        <PopupRecipeSubTitle>Instructions</PopupRecipeSubTitle>
-        <PopupRecipeInstructions>
-          {recipe.strInstructions}
-        </PopupRecipeInstructions>
+            </PopupRecipeIngredientsContainer>
+            <PopupRecipeInstructionsContainer>
+        <PopupRecipeInstructionsTitle>Instructions</PopupRecipeInstructionsTitle>
+        <PopupRecipeInstructions>{recipe.strInstructions}</PopupRecipeInstructions>
+        </PopupRecipeInstructionsContainer>
+          </PopupRecipeConcent>
         </PopupRecipeTextContent>
         {/* Button has either Add or Remove depending on if hasRemove is true/false */}
         <AddButton onClick={handleClick}>
