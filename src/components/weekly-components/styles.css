@@ -18,7 +18,7 @@
 }
 
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1100px) {
     #container {
         display: grid;
         height: 100vh;
@@ -34,6 +34,14 @@
     #overview-headline {
         font-size: 32px;
         line-height: 150px;
+    }
+}
+
+
+@media only screen and (min-width: 1450px) {
+    #container {
+        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
