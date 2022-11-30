@@ -5,4 +5,5 @@ export const HeaderContainer = styled.section`
 `;
 export const Heading = styled.h1`
   margin: 0;
+  font-family: "Lobster";
 `;
