@@ -72,18 +72,43 @@ export const WeekdayTitle = styled.h2`
     }
 `;
 
-export const WeeklyOverviewPageHeadline = styled.h1`
-  color: white;
-  font-size: 24px;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 100px;
+export const Logo = styled.img`
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 22px;
 `;
 
-export const WeeklyOverviewPageHeader = styled.div`
+export const HeadlineContainer = styled.div`
+  margin-top: 14px;
+  align-self: center;
+`;
+
+export const PageHeadline = styled.h1`
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  @media only screen and (min-width: 1600px) {
+    font-size: 40px;
+    line-height: 200px;
+  }
+`;
+
+export const FakeDiv = styled.div`
+  width: 150px;
+`;
+
+export const PageHeader = styled.div`
   background: var(--primary-orange);
   width: 100%;
-  height: 100px;
+  height: 123px;
   border-bottom: 7px solid var(--primary-lightblue);
   margin-bottom: 50px;
+  @media only screen and (min-width: 1600px) {
+    height: 200px;
+    margin-bottom: 120px;
+    }
+    @media only screen and (min-width: 2000px) {
+      margin-bottom: -95px;
+    }
 `;

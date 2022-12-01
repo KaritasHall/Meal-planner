@@ -46,25 +46,8 @@
 }
 
 
-@media only screen and (min-width: 1600px) {
-    #overview-header {
-        height: 200px;
-        margin-bottom: 120px;
-    }
-
-    #overview-headline {
-        font-size: 40px;
-        line-height: 200px;
-    }
-}
-
-
-    @media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 2000px) {
     #container {
         margin: 220px;
     }
-
-    #overview-header {
-        margin-bottom: -95px;
-    }
-    }
+}
