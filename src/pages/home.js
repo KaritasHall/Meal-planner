@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/header/header";
+import Header from "../components/home-components/header/header";
 import chefhat from "../components/home-components/icons/chefhat.svg";
 import calendar from "../components/home-components/icons/calendar.svg";
 import shopping from "../components/home-components/icons/shopping.svg";
