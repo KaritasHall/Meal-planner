@@ -1,14 +1,13 @@
 import React from "react";
 import WeekdayCard from "../components/weekly-components/weekday-card";
-import { WeeklyOverviewPageHeader, WeekdayTitleContainer, WeekdayTitle, WeeklyOverviewPageHeadline } from "../components/weekly-components/styles";
+import { Header } from "../components/header";
+import { WeekdayTitleContainer, WeekdayTitle } from "../components/weekly-components/styles";
 import "../components/weekly-components/styles.css"
 
 function WeeklyOverview() {
   return (
     <>
-      <WeeklyOverviewPageHeader id="overview-header">
-      <WeeklyOverviewPageHeadline id="overview-headline">Weekly overview</WeeklyOverviewPageHeadline>
-      </WeeklyOverviewPageHeader>
+      <Header title={"Weekly overview"} />
 
       <div id="container">
         <div>

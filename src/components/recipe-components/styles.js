@@ -6,14 +6,6 @@ export const CardContainer = styled.div`
   position: relative;
 `;
 
-export const RecipePageHeadline = styled.h1`
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 45px 0 50px 0;
-`;
-
 export const RecipeCard = styled.div`
   cursor: pointer;
   width: 300px;
