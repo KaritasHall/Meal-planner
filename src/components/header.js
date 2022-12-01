@@ -1,21 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../components/weekly-components/brandLogo.png"
+import logo from "../components/weekly-components/brandLogo.png";
+
+export function Header(props) {
+  return (
+    <>
+      <PageHeader>
+        <div>
+          <Link to="/">
+            <Logo src={logo} />
+          </Link>
+        </div>
+        <HeadlineContainer>
+          <PageHeadline>{props.title}</PageHeadline>
+        </HeadlineContainer>
+        <FakeDiv></FakeDiv>
+      </PageHeader>
+    </>
+  );
+}
 
 const Logo = styled.img`
-    margin-top: 10px;
-    margin-left: 10px;
-    height: 22px;
-    @media only screen and (min-width: 690px) {
-        margin-top: 14px;
-        margin-left: 14px;
-        height: 32px;
-        }
-    @media only screen and (min-width: 1600px) {
-        margin-top: 20px;
-        margin-left: 35px;
-        height: 50px;
-      }
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 22px;
+  @media only screen and (min-width: 690px) {
+    margin-top: 14px;
+    margin-left: 14px;
+    height: 32px;
+  }
+  @media only screen and (min-width: 1600px) {
+    margin-top: 20px;
+    margin-left: 35px;
+    height: 50px;
+  }
 `;
 
 const HeadlineContainer = styled.div`
@@ -23,7 +42,7 @@ const HeadlineContainer = styled.div`
   align-self: center;
   @media only screen and (min-width: 690px) {
     margin-top: -4px;
-    }
+  }
 `;
 
 const PageHeadline = styled.h1`
@@ -33,7 +52,7 @@ const PageHeadline = styled.h1`
   text-transform: uppercase;
   @media only screen and (min-width: 690px) {
     font-size: 28px;
-    }
+  }
   @media only screen and (min-width: 1600px) {
     font-size: 40px;
     margin-top: 5px;
@@ -53,25 +72,8 @@ const PageHeader = styled.div`
   @media only screen and (min-width: 1600px) {
     height: 200px;
     margin-bottom: 120px;
-    }
-    @media only screen and (min-width: 2000px) {
-      margin-bottom: -95px;
-    }
-`;
-
-
-export function Header(props) {
-    return (
-      <>
-         <PageHeader>
-        <div>
-      <Logo src={logo}/>
-        </div>
-        <HeadlineContainer>
-      <PageHeadline>{props.title}</PageHeadline>
-        </HeadlineContainer>
-        <FakeDiv></FakeDiv>
-      </PageHeader>
-      </>
-    );
   }
+  @media only screen and (min-width: 2000px) {
+    margin-bottom: -95px;
+  }
+`;

@@ -12,12 +12,12 @@ export const RecipeCard = styled.div`
   height: 170px;
   margin-bottom: 40px;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px #CDCDCD;
+  box-shadow: 1px 1px 5px #cdcdcd;
   @media only screen and (min-width: 1600px) {
     width: 450px;
     height: 320px;
     margin-bottom: 80px;
-    }
+  }
 `;
 
 export const RecipeImg = styled.img`
@@ -30,14 +30,14 @@ export const RecipeImg = styled.img`
   @media only screen and (min-width: 1600px) {
     width: 450px;
     height: 320px;
-    }
+  }
 `;
 
 export const TitleBackground = styled.div`
   z-index: 1;
   width: 300px;
   height: 40px;
-  background: #FE6532;
+  background: #fe6532;
   position: absolute;
   margin-top: 130px;
   border-radius: 0 0 8px 8px;
@@ -45,7 +45,7 @@ export const TitleBackground = styled.div`
     width: 450px;
     height: 50px;
     margin-top: 270px;
-    }
+  }
 `;
 
 export const RecipeTitle = styled.h2`
@@ -58,7 +58,7 @@ export const RecipeTitle = styled.h2`
   @media only screen and (min-width: 1600px) {
     font-size: 24px;
     padding: 9px 0 0px 12px;
-    }
+  }
 `;
 
 export const PopupBackground = styled.div`
@@ -86,10 +86,10 @@ export const PopupRecipeCard = styled.div`
   box-shadow: inset 0 -40px 0 rgba(255, 255, 255, 0.9);
   @media only screen and (min-width: 1024px) {
     max-width: 796px;
-      }
+  }
   @media only screen and (min-width: 1600px) {
     max-width: 796px;
-      }
+  }
 `;
 
 export const PopupRecipeHeader = styled.div`
@@ -101,7 +101,7 @@ export const PopupRecipeHeader = styled.div`
   height: 40px;
   @media only screen and (min-width: 1024px) {
     max-width: 790px;
-      }
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -119,13 +119,13 @@ export const PopupRecipeImg = styled.img`
   width: 90%;
   height: 170px;
   object-fit: cover;
-  border-left: 6px solid #FE6532;
+  border-left: 6px solid #fe6532;
   display: block;
   margin: auto;
   margin-top: 50px;
   @media only screen and (min-width: 1024px) {
     height: 230px;
-      }
+  }
 `;
 
 export const PopupRecipeTextContent = styled.div`
@@ -143,7 +143,7 @@ export const PopupRecipeTitle = styled.h2`
   margin: 20px 0 25px 0;
   @media only screen and (min-width: 1024px) {
     font-size: 24px;
-      }
+  }
 `;
 
 export const PopupRecipeConcent = styled.div`
@@ -152,15 +152,15 @@ export const PopupRecipeConcent = styled.div`
   @media only screen and (min-width: 1024px) {
     display: flex;
     flex-direction: row;
-    }
+  }
 `;
 
 export const PopupRecipeIngredientsContainer = styled.div`
   font-size: 16px;
   @media only screen and (min-width: 1024px) {
-  width: 45%;
-  margin-top: -25px;
-    }
+    width: 45%;
+    margin-top: -25px;
+  }
 `;
 
 export const PopupRecipeIngredientsTitle = styled.h3`
@@ -170,7 +170,7 @@ export const PopupRecipeIngredientsTitle = styled.h3`
   margin-bottom: 0px;
   @media only screen and (min-width: 1024px) {
     font-size: 20px;
-      }
+  }
 `;
 
 export const PopupRecipeIngredients = styled.p`
@@ -181,7 +181,7 @@ export const PopupRecipeIngredients = styled.p`
   margin-right: -20px;
   @media only screen and (min-width: 1024px) {
     margin-right: 0px;
-      }
+  }
 `;
 
 export const PopupRecipeInstructionsContainer = styled.div`
@@ -190,7 +190,7 @@ export const PopupRecipeInstructionsContainer = styled.div`
     width: 55%;
     margin-top: -25px;
     margin-left: 30px;
-      }
+  }
 `;
 
 export const PopupRecipeInstructionsTitle = styled.h3`
@@ -200,7 +200,7 @@ export const PopupRecipeInstructionsTitle = styled.h3`
   margin-bottom: 0px;
   @media only screen and (min-width: 1024px) {
     font-size: 20px;
-      }
+  }
 `;
 
 export const PopupRecipeInstructions = styled.p`
@@ -211,7 +211,7 @@ export const PopupRecipeInstructions = styled.p`
   margin-right: -20px;
   @media only screen and (min-width: 1024px) {
     margin-right: -45px;
-      }
+  }
 `;
 
 export const AddButton = styled.button`
@@ -224,5 +224,5 @@ export const AddButton = styled.button`
   display: block;
   margin: auto;
   margin-top: 40px;
+  cursor: pointer;
 `;
-
