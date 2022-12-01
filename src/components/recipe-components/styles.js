@@ -97,8 +97,11 @@ export const PopupRecipeHeader = styled.div`
   display: flex;
   justify-content: center;
   background: rgba(255, 255, 255, 0.9);
-  width: 285px;
+  width: 73vw;
   height: 40px;
+  @media only screen and (min-width: 1024px) {
+    max-width: 790px;
+      }
 `;
 
 export const CloseButton = styled.button`
