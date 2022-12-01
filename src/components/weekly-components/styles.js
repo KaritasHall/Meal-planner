@@ -19,6 +19,7 @@ export const EmptyCardContainer = styled.div`
 `;
 
 export const EmptyCardButton = styled.button`
+  cursor: pointer;
   width: 80px;
   height: 80px;
   border: 1px solid #02195a;

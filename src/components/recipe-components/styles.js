@@ -15,6 +15,7 @@ export const RecipePageHeadline = styled.h1`
 `;
 
 export const RecipeCard = styled.div`
+  cursor: pointer;
   width: 300px;
   height: 170px;
   margin-bottom: 40px;
@@ -83,7 +84,7 @@ export const PopupRecipeCard = styled.div`
   width: 75%;
   min-height: 300px;
   max-height: 70%;
-  max-width: 50%;
+  max-width: 72%;
   background-color: #fff;
   border: 1px solid #999;
   border-radius: 4px;
@@ -91,6 +92,9 @@ export const PopupRecipeCard = styled.div`
   padding: 0 20px 20px 20px;
   overflow-y: auto;
   box-shadow: inset 0 -40px 0 rgba(255, 255, 255, 0.9);
+  @media only screen and (min-width: 1024px) {
+    max-width: 796px;
+      }
   @media only screen and (min-width: 1600px) {
     max-width: 796px;
       }
