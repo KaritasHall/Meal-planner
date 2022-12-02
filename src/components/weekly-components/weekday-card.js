@@ -35,7 +35,7 @@ export default function WeekdayCard({ weekday }) {
   If you look at recipe-card.js, you can see that it takes recipe as a prop, that is why we have recipe={meal}*/
   if (meal) {
     return (
-      <Link to={`/weekly-overview/${weekday}`}>
+      <Link className="weekday-link" to={`/weekly-overview/${weekday}`}>
         <Card recipe={meal} hasRemove={true} />
       </Link>
     );

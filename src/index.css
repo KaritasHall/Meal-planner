@@ -42,3 +42,7 @@ body.active-popup {
     padding-right: 120px;
   }
 }
+
+.weekday-link {
+  cursor: default;
+}
