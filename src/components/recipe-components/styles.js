@@ -36,7 +36,8 @@ export const RecipeImg = styled.img`
 export const TitleBackground = styled.div`
   z-index: 1;
   width: 300px;
-  height: 40px;
+  min-height: 40px;
+  height: 100%;
   background: #fe6532;
   position: absolute;
   margin-top: 130px;
