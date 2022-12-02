@@ -44,10 +44,15 @@ function Home() {
           </LandingContent>
 
           <LottieContainer>
-            <FoodAnimation loop animationData={lottieJson} play />
+            <FoodAnimation
+              loop
+              animationData={lottieJson}
+              play
+              alt="animation of woman cooking"
+            />
           </LottieContainer>
 
-          <LandingFooter href="#about">
+          <LandingFooter href="#about" aria-label="Go to about section">
             <LandingArrow src={scrollArrow} />
           </LandingFooter>
         </LandingSection>
@@ -61,11 +66,11 @@ function Home() {
               Browse quickly through our recipes and discover dinner ideas with
               ease
             </AboutDescription>
-            <AboutIcon src={chefhat} />
+            <AboutIcon src={chefhat} alt="Chefhat icon" />
           </AboutContent>
           <Line />
           <AboutContent>
-            <AboutIcon src={calendar} />
+            <AboutIcon src={calendar} alt="Calendar icon" />
             <AboutDescription>
               Pick and add a recipe for every day of the week
             </AboutDescription>
@@ -76,7 +81,7 @@ function Home() {
             <AboutDescription>
               Enjoy discovering new recipes and ingredients
             </AboutDescription>
-            <AboutIcon src={shopping} />
+            <AboutIcon src={shopping} alt="Shopping bag with groceries" />
           </AboutContent>
         </AboutContainer>
         <ButtonContainer>

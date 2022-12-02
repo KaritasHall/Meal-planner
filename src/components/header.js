@@ -9,7 +9,7 @@ export function Header(props) {
       <PageHeader>
         <div>
           <Link to="/">
-            <Logo src={logo} />
+            <Logo src={logo} aria-label="Go back home" />
           </Link>
         </div>
         <HeadlineContainer>
