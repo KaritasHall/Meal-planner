@@ -1,8 +1,14 @@
-import { RecipeCard, CardContainer, RecipeImg, RecipeTitle, TitleBackground } from "./styles";
+import {
+  RecipeCard,
+  CardContainer,
+  RecipeImg,
+  RecipeTitle,
+  TitleBackground,
+} from "./styles";
 import React, { useCallback, useEffect, useState } from "react";
 import PopupCard from "./popup-card";
 import { useParams } from "react-router-dom";
-import "./styles.css"
+import "./styles.css";
 
 /* hasRemove has the default value of false, which allows us to use it optionally.
 This will be used later to make Popup card reusable, and flip between Add/Remove*/
@@ -30,7 +36,7 @@ function Card({ recipe, hasRemove = false }) {
         <TitleBackground>
           <RecipeTitle>{recipe.strMeal}</RecipeTitle>
         </TitleBackground>
-        <RecipeImg src={recipe.strMealThumb} />
+        <RecipeImg src={recipe.strMealThumb} alt="Recipe image" />
       </RecipeCard>
       <PopupCard
         togglePopup={togglePopup}
