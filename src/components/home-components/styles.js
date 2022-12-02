@@ -26,6 +26,13 @@ export const LandingSection = styled.section`
   }
 
   @media screen and (min-width: 1600px) {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    margin-right: 20px;
+  }
+
+  @media screen and (min-width: 2000px) {
     padding-left: 240px;
     padding-right: 240px;
     padding-top: 30px;
@@ -46,7 +53,8 @@ export const LandingContent = styled.div`
   @media screen and (min-width: 1024px) {
     margin-top: 20px;
   }
-  @media screen and (min-width: 1600px) {
+
+  @media screen and (min-width: 2000px) {
     margin-top: 120px;
   }
 `;
@@ -76,7 +84,7 @@ export const StartButton = styled(Link)`
     font-size: 18px;
   }
 
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 2000px) {
     margin-top: 36px;
     width: 303px;
     height: 70px;
@@ -103,7 +111,7 @@ export const LandingTitle = styled.h1`
     font-size: 85px;
   }
 
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 2000px) {
     font-size: 120px;
   }
 `;
@@ -125,7 +133,7 @@ export const LandingSubtitle = styled.h2`
     font-size: 50px;
   }
 
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 2000px) {
     font-size: 84px;
   }
 `;
@@ -148,7 +156,7 @@ export const LandingParagraph = styled.p`
     inline-size: 230px;
     line-height: 30px;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1600px) {
     margin-top: 100px;
     font-size: 25px;
     inline-size: 500px;
@@ -159,17 +167,21 @@ export const LandingParagraph = styled.p`
 export const FoodAnimation = styled(Lottie)`
   position: relative;
   max-height: 100%;
-  transform: scale(1.2);
+  bottom: 70px;
+  transform: scale(1);
   @media screen and (min-width: 768px) {
-    transform: scale(1);
+    bottom: 0px;
     margin-top: -250px;
   }
   @media screen and (min-width: 1024px) {
-    transform: scale(2);
+    transform: scale(1.2);
     margin-top: 10px;
   }
   @media screen and (min-width: 1440px) {
     transform: translateY(-100px);
+  }
+  @media screen and (min-width: 1800px) {
+    transform: translateY(-180px);
   }
 `;
 
@@ -177,7 +189,7 @@ export const LottieContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
+  position: relative;
   background-color: var(--primary-orange);
   z-index: 1;
   overflow: hidden;
@@ -193,25 +205,31 @@ export const LottieContainer = styled.div`
 
 export const LandingFooter = styled.a`
   position: absolute;
-  bottom: 36px;
+  z-index: 2;
   display: flex;
   justify-content: center;
+  bottom: 0;
   width: 100%;
-`;
-
-export const LandingArrow = styled.img`
-  height: 15px;
+  height: 36px;
+  padding-top: 8px;
+  background-color: var(--primary-orange);
   @media screen and (min-width: 1024px) {
     display: none;
   }
 `;
 
+export const LandingArrow = styled.img`
+  height: 16px;
+`;
+
 export const AboutSection = styled.section`
   background-color: var(--primary-lightblue);
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+
   @media screen and (min-width: 1024px) {
     height: 25vh;
+    min-height: unset;
     padding-bottom: 10px;
     padding-bottom: 5px;
   }
@@ -247,7 +265,7 @@ export const AboutContainer = styled.div`
     padding-top: 20px;
     margin-top: 0;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 2000px) {
     margin-left: 200px;
     margin-right: 200px;
   }
@@ -270,7 +288,7 @@ export const AboutDescription = styled.p`
 export const AboutContent = styled.div`
   display: flex;
   margin-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   padding-top: 20px;
   padding-left: 12px;
   padding-right: 12px;
@@ -280,15 +298,14 @@ export const AboutContent = styled.div`
   @media screen and (min-width: 1024px) {
     padding-bottom: 10px;
     margin-top: 15px;
-    &:nth-of-type(1) {
+    border: none;
+    &#about-chef {
       flex-direction: row-reverse;
-      border-right: solid 2px var(--primary-darkblue);
       @media screen and (min-width: 1600px) {
         border-right: none;
       }
     }
-    &:nth-of-type(3) {
-      border-left: solid 2px var(--primary-darkblue);
+    &#about-shop {
       flex-direction: row-reverse;
       @media screen and (min-width: 1600px) {
         border-left: none;
@@ -300,8 +317,9 @@ export const AboutContent = styled.div`
   }
 `;
 
-export const Line = styled.hr`
-  border: 1px solid var(--primary-darkblue);
+export const Line = styled.div`
+  background-color: var(--primary-darkblue);
+  height: 2px;
   width: 300px;
   margin: auto;
   @media screen and (min-width: 768px) {
@@ -316,12 +334,20 @@ export const AboutIcon = styled.img`
   width: 86px;
   object-fit: contain;
   object-position: top;
+  @media screen and (min-width: 1024px) {
+    width: 60px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 86px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 25px;
+  padding-bottom: 64px;
   @media screen and (min-width: 768px) {
     margin-top: 70px;
   }
