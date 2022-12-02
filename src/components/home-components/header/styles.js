@@ -9,4 +9,10 @@ export const HeaderContainer = styled.img`
   @media only screen and (min-width: 1600px) {
     height: 50px;
   }
+
+  @media only screen and (min-width: 1600px) {
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 200px;
+  }
 `;

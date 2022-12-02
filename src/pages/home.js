@@ -25,6 +25,7 @@ import {
   StartButton,
   AboutIcon,
   ButtonContainer,
+  Line,
 } from "../components/home-components/styles";
 
 function Home() {
@@ -62,12 +63,15 @@ function Home() {
             </AboutDescription>
             <AboutIcon src={chefhat} />
           </AboutContent>
+          <Line />
           <AboutContent>
             <AboutIcon src={calendar} />
             <AboutDescription>
               Pick and add a recipe for every day of the week
             </AboutDescription>
           </AboutContent>
+          <Line />
+
           <AboutContent>
             <AboutDescription>
               Enjoy discovering new recipes and ingredients
