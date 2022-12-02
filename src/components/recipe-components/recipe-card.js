@@ -34,7 +34,10 @@ function Card({ recipe, hasRemove = false }) {
     <CardContainer>
       <RecipeCard onClick={togglePopup}>
         <TitleBackground>
-          <RecipeTitle>{recipe.strMeal}</RecipeTitle>
+          <RecipeTitle>
+            {recipe.strMeal.slice(0, 34) +
+              (recipe.strMeal.length > 34 ? "..." : "")}
+          </RecipeTitle>
         </TitleBackground>
         <RecipeImg src={recipe.strMealThumb} alt="Recipe image" />
       </RecipeCard>
