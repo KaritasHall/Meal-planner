@@ -46,16 +46,22 @@ const HeadlineContainer = styled.div`
 `;
 
 const PageHeadline = styled.h1`
+  font-family: 'Lobster Two', cursive;
   color: white;
-  font-size: 22px;
+  font-size: 26px;
   text-align: center;
-  text-transform: uppercase;
+  margin-top: -7px;
   @media only screen and (min-width: 690px) {
-    font-size: 28px;
+    font-size: 32px;
+    margin-top: -9px;
+  }
+  @media only screen and (min-width: 1024px) {
+    font-size: 40px;
+    margin-top: -16px;
   }
   @media only screen and (min-width: 1600px) {
-    font-size: 40px;
-    margin-top: 5px;
+    font-size: 50px;
+    margin-top: -9px;
   }
 `;
 

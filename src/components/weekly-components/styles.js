@@ -84,6 +84,7 @@ export const HeadlineContainer = styled.div`
 `;
 
 export const PageHeadline = styled.h1`
+  font-family: "Lobster", cursive;
   color: white;
   font-size: 22px;
   text-align: center;
