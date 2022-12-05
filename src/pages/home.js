@@ -61,23 +61,26 @@ function Home() {
       <AboutSection id="about">
         <AboutTitle>Get Started</AboutTitle>
         <AboutContainer>
-          <AboutContent>
+          <AboutContent id="about-chef">
             <AboutDescription>
               Browse quickly through our recipes and discover dinner ideas with
               ease
             </AboutDescription>
             <AboutIcon src={chefhat} alt="Chefhat icon" />
           </AboutContent>
+
           <Line />
-          <AboutContent>
+
+          <AboutContent id="about-calendar">
             <AboutIcon src={calendar} alt="Calendar icon" />
             <AboutDescription>
               Pick and add a recipe for every day of the week
             </AboutDescription>
           </AboutContent>
+
           <Line />
 
-          <AboutContent>
+          <AboutContent id="about-shop">
             <AboutDescription>
               Enjoy discovering new recipes and ingredients
             </AboutDescription>
