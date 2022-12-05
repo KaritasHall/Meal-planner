@@ -173,12 +173,16 @@ export const PopupRecipeIngredientsTitle = styled.h3`
   }
 `;
 
-export const PopupRecipeIngredients = styled.p`
+export const ListItem = styled.li`
+  list-style-type: disc;
+`;
+
+export const PopupRecipeIngredients = styled.ul`
   color: black;
   font-size: 16px;
   margin-top: 10px;
   line-height: 25px;
-  margin-right: -20px;
+  padding-left: 16px;
   @media only screen and (min-width: 1024px) {
     margin-right: 0px;
   }

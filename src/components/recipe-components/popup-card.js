@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import useOnClickOutside from "use-onclickoutside";
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +19,7 @@ import {
   PopupRecipeHeader,
   PopupRecipeIngredientsContainer,
   PopupRecipeInstructionsContainer,
+  ListItem,
 } from "./styles";
 
 export default function PopupCard({
@@ -38,20 +39,21 @@ export default function PopupCard({
   */
   const navigate = useNavigate();
 
-  if (!popup) return null;
+  const IngredientsList = useMemo(() => {
+    const list = [];
 
-  const IngredientsList = [];
-
-  // Should this be a useState, so it will render only once?
-  for (let i = 1; i < 20; i++) {
-    if (recipe["strIngredient" + i]) {
-      IngredientsList.push(
-        <div>
-          • {`${recipe["strIngredient" + i]}, ${recipe["strMeasure" + i]}`}
-        </div>
-      );
+    for (let i = 1; i <= 20; i++) {
+      const value = recipe["strIngredient" + i];
+      if (value) {
+        list.push(
+          <ListItem key={value}>
+            {`${value}, ${recipe["strMeasure" + i]}`}
+          </ListItem>
+        );
+      }
     }
-  }
+    return list;
+  }, [recipe]);
 
   /* Expanded the handleClick to have two versions - Add and Remove
   I also had to take the Link off the AddButton and use useNavigate here to properly
@@ -68,26 +70,34 @@ export default function PopupCard({
     }
   }
 
+  if (!popup) return null;
+
   return (
     <PopupBackground>
       <PopupRecipeCard ref={popupRecipeCardRef}>
         <PopupRecipeHeader>
-        <CloseButton onClick={togglePopup}>x</CloseButton>
+          <CloseButton onClick={togglePopup}>x</CloseButton>
         </PopupRecipeHeader>
         <PopupRecipeImg src={recipe.strMealThumb} />
         <PopupRecipeTextContent>
           <PopupRecipeTitleContainer>
-        <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
+            <PopupRecipeTitle>{recipe.strMeal}</PopupRecipeTitle>
           </PopupRecipeTitleContainer>
           <PopupRecipeConcent>
             <PopupRecipeIngredientsContainer>
-        <PopupRecipeIngredientsTitle>Ingredients</PopupRecipeIngredientsTitle>
-        <PopupRecipeIngredients>{IngredientsList}</PopupRecipeIngredients>
+              <PopupRecipeIngredientsTitle>
+                Ingredients
+              </PopupRecipeIngredientsTitle>
+              <PopupRecipeIngredients>{IngredientsList}</PopupRecipeIngredients>
             </PopupRecipeIngredientsContainer>
             <PopupRecipeInstructionsContainer>
-        <PopupRecipeInstructionsTitle>Instructions</PopupRecipeInstructionsTitle>
-        <PopupRecipeInstructions>{recipe.strInstructions}</PopupRecipeInstructions>
-        </PopupRecipeInstructionsContainer>
+              <PopupRecipeInstructionsTitle>
+                Instructions
+              </PopupRecipeInstructionsTitle>
+              <PopupRecipeInstructions>
+                {recipe.strInstructions}
+              </PopupRecipeInstructions>
+            </PopupRecipeInstructionsContainer>
           </PopupRecipeConcent>
         </PopupRecipeTextContent>
         {/* Button has either Add or Remove depending on if hasRemove is true/false */}
