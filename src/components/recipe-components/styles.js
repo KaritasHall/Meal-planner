@@ -175,6 +175,7 @@ export const PopupRecipeIngredientsTitle = styled.h3`
 
 export const ListItem = styled.li`
   list-style-type: disc;
+  text-transform: capitalize;
 `;
 
 export const PopupRecipeIngredients = styled.ul`

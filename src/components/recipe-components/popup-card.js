@@ -57,7 +57,7 @@ export default function PopupCard({
 
   /* Expanded the handleClick to have two versions - Add and Remove
   I also had to take the Link off the AddButton and use useNavigate here to properly
-  reuse the Ppopup card component. In the previous version it had a hardcorded single
+  reuse the Popup card component. In the previous version it had a hardcorded single
   destination (weekly-overview) */
   function handleClick() {
     if (hasRemove) {
