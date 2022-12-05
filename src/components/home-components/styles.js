@@ -265,6 +265,11 @@ export const AboutContainer = styled.div`
     padding-top: 20px;
     margin-top: 0;
   }
+  @media screen and (min-width: 1600px) {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 30px;
+  }
   @media screen and (min-width: 2000px) {
     margin-left: 200px;
     margin-right: 200px;
@@ -279,7 +284,7 @@ export const AboutDescription = styled.p`
   @media screen and (min-width: 678px) {
     font-size: 20px;
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 2000px) {
     font-size: 22px;
     inline-size: 350px;
   }
@@ -288,7 +293,7 @@ export const AboutDescription = styled.p`
 export const AboutContent = styled.div`
   display: flex;
   margin-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   padding-top: 20px;
   padding-left: 12px;
   padding-right: 12px;
@@ -301,17 +306,19 @@ export const AboutContent = styled.div`
     border: none;
     &#about-chef {
       flex-direction: row-reverse;
+      border-right: solid 2px var(--primary-darkblue);
       @media screen and (min-width: 1600px) {
         border-right: none;
       }
     }
     &#about-shop {
       flex-direction: row-reverse;
+      border-left: solid 2px var(--primary-darkblue);
       @media screen and (min-width: 1600px) {
         border-left: none;
       }
     }
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 2000px) {
       margin-top: 75px;
     }
   }
