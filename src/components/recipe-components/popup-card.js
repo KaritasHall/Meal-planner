@@ -44,6 +44,7 @@ export default function PopupCard({
 
     for (let i = 1; i <= 20; i++) {
       const value = recipe["strIngredient" + i];
+
       if (value) {
         list.push(
           <ListItem key={value}>
@@ -52,6 +53,7 @@ export default function PopupCard({
         );
       }
     }
+
     return list;
   }, [recipe]);
 
