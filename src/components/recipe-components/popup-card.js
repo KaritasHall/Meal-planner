@@ -37,6 +37,7 @@ export default function PopupCard({
   https://reactrouter.com/en/main/hooks/use-navigate
   See usage in the handleClick function
   */
+
   const navigate = useNavigate();
 
   const IngredientsList = useMemo(() => {

@@ -1,8 +1,11 @@
 import React from "react";
 import WeekdayCard from "../components/weekly-components/weekday-card";
 import { Header } from "../components/header";
-import { WeekdayTitleContainer, WeekdayTitle } from "../components/weekly-components/styles";
-import "../components/weekly-components/styles.css"
+import {
+  WeekdayTitleContainer,
+  WeekdayTitle,
+} from "../components/weekly-components/styles";
+import "../components/weekly-components/styles.css";
 
 function WeeklyOverview() {
   return (
@@ -11,33 +14,49 @@ function WeeklyOverview() {
 
       <div id="container">
         <div>
-      <WeekdayTitleContainer><WeekdayTitle>Monday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="monday" />
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Monday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="monday" />
+        </div>
+
+        <div>
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Tuesday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="tuesday" />
+        </div>
+
+        <div>
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Wednesday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="wednesday" />
         </div>
         <div>
-      <WeekdayTitleContainer><WeekdayTitle>Tuesday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="tuesday" />
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Thursday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="thursday" />
         </div>
         <div>
-      <WeekdayTitleContainer><WeekdayTitle>Wednesday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="wednesday" />
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Friday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="friday" />
         </div>
         <div>
-      <WeekdayTitleContainer><WeekdayTitle>Thursday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="thursday" />
-       </div>
-       <div>
-      <WeekdayTitleContainer><WeekdayTitle>Friday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="friday" />
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Saturday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="saturday" />
         </div>
         <div>
-      <WeekdayTitleContainer><WeekdayTitle>Saturday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="saturday" />
-       </div>
-       <div>
-      <WeekdayTitleContainer><WeekdayTitle>Sunday</WeekdayTitle></WeekdayTitleContainer>
-      <WeekdayCard weekday="sunday" />
-       </div>
+          <WeekdayTitleContainer>
+            <WeekdayTitle>Sunday</WeekdayTitle>
+          </WeekdayTitleContainer>
+          <WeekdayCard weekday="sunday" />
+        </div>
       </div>
     </>
   );
