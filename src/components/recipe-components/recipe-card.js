@@ -32,7 +32,12 @@ function Card({ recipe, hasRemove = false }) {
 
   return (
     <CardContainer>
-      <RecipeCard onClick={togglePopup}>
+      <RecipeCard
+        onClick={togglePopup}
+        whileHover={{
+          scale: 1.05,
+        }}
+      >
         <TitleBackground>
           <RecipeTitle>
             {recipe.strMeal.slice(0, 28) +
