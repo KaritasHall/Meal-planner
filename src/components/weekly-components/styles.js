@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export const EmptyCardContainer = styled.div`
+export const EmptyCardContainer = styled(motion.div)`
   width: 300px;
   height: 170px;
   border: 1px solid #eaf5ff;
@@ -10,12 +11,12 @@ export const EmptyCardContainer = styled.div`
   margin: auto;
   display: flex;
 
-  box-shadow: 1px 1px 5px #CDCDCD;
+  box-shadow: 1px 1px 5px #cdcdcd;
   margin-bottom: 40px;
   @media only screen and (min-width: 1600px) {
     width: 450px;
     height: 320px;
-    }
+  }
 `;
 
 export const EmptyCardButton = styled.button`
@@ -24,13 +25,16 @@ export const EmptyCardButton = styled.button`
   height: 80px;
   border: 1px solid #02195a;
   border-radius: 50%;
+  :active {
+    background-color: var(--primary-orange);
+    border: 1px solid var(--primary-orange);
+  }
 
-  background-color: #02195A;
+  background-color: #02195a;
   @media only screen and (min-width: 1600px) {
     width: 130px;
     height: 130px;
-    }
-
+  }
 `;
 
 export const EmptyCardButtonLabel = styled.h1`
@@ -42,7 +46,7 @@ export const EmptyCardButtonLabel = styled.h1`
   margin: 0px;
   @media only screen and (min-width: 1600px) {
     font-size: 100px;
-    }
+  }
 `;
 
 export const EmptyCardButtonLink = styled(Link)`
@@ -59,7 +63,7 @@ export const WeekdayTitleContainer = styled.div`
   text-align: left;
   @media only screen and (min-width: 1600px) {
     width: 450px;
-    }
+  }
 `;
 
 export const WeekdayTitle = styled.h2`
@@ -67,15 +71,17 @@ export const WeekdayTitle = styled.h2`
   font-size: 16px;
   text-transform: uppercase;
   padding-left: 3px;
+  padding-bottom: 3px;
   @media only screen and (min-width: 1600px) {
     font-size: 24px;
-    }
+    padding-bottom: 8px;
+  }
 `;
 
 export const Logo = styled.img`
-    margin-top: 10px;
-    margin-left: 10px;
-    height: 22px;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 22px;
 `;
 
 export const HeadlineContainer = styled.div`
@@ -108,8 +114,8 @@ export const PageHeader = styled.div`
   @media only screen and (min-width: 1600px) {
     height: 200px;
     margin-bottom: 120px;
-    }
-    @media only screen and (min-width: 2000px) {
-      margin-bottom: -95px;
-    }
+  }
+  @media only screen and (min-width: 2000px) {
+    margin-bottom: -95px;
+  }
 `;

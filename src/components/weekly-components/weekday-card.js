@@ -43,7 +43,11 @@ export default function WeekdayCard({ weekday }) {
 
   return (
     <>
-      <EmptyCardContainer>
+      <EmptyCardContainer
+        whileHover={{
+          scale: 1.05,
+        }}
+      >
         <EmptyCardButtonLink to={`/recipes/${weekday}`}>
           <EmptyCardButton>
             <EmptyCardButtonLabel>+</EmptyCardButtonLabel>
