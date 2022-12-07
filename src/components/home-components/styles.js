@@ -64,10 +64,10 @@ export const StartButton = styled(Link)`
   display: grid;
   align-items: center;
   color: white;
-  background-color: ${(props) =>
+  background: ${(props) =>
     props.backgroundColor === "orange"
       ? "var(--primary-orange)"
-      : "var(--primary-darkblue)"};
+      : "linear-gradient(to left, var(--primary-darkblue), #5f6ed9, var(--primary-darkblue), var(--primary-darkblue))"};
   text-align: center;
   width: 160px;
   height: 48px;
@@ -76,6 +76,11 @@ export const StartButton = styled(Link)`
   border-radius: 5px;
   margin-top: 16px;
   text-decoration: none;
+  background-size: 300%;
+  transition: 0.3s;
+  :hover {
+    background-position: right;
+  }
 
   @media screen and (min-width: 375px) {
     margin-top: 26px;
