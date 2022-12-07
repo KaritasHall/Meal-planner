@@ -6,6 +6,7 @@ import {
   WeekdayTitle,
 } from "../components/weekly-components/styles";
 import "../components/weekly-components/styles.css";
+import { AnimationWrapper, bounceAnimation } from "../components/animations";
 
 function WeeklyOverview() {
   return (
@@ -13,50 +14,54 @@ function WeeklyOverview() {
       <Header title={"Weekly overview"} />
 
       <div id="container">
-        <div>
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Monday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="monday" />
-        </div>
+        </AnimationWrapper>
 
-        <div>
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Tuesday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="tuesday" />
-        </div>
+        </AnimationWrapper>
 
-        <div>
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Wednesday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="wednesday" />
-        </div>
-        <div>
+        </AnimationWrapper>
+
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Thursday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="thursday" />
-        </div>
-        <div>
+        </AnimationWrapper>
+
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Friday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="friday" />
-        </div>
-        <div>
+        </AnimationWrapper>
+
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Saturday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="saturday" />
-        </div>
-        <div>
+        </AnimationWrapper>
+
+        <AnimationWrapper {...bounceAnimation}>
           <WeekdayTitleContainer>
             <WeekdayTitle>Sunday</WeekdayTitle>
           </WeekdayTitleContainer>
           <WeekdayCard weekday="sunday" />
-        </div>
+        </AnimationWrapper>
       </div>
     </>
   );
