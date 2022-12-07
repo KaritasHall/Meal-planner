@@ -231,4 +231,8 @@ export const AddButton = styled.button`
   margin: auto;
   margin-top: 40px;
   cursor: pointer;
+  :hover {
+    background-color: #1a398f;
+    transition: 300ms;
+  }
 `;
