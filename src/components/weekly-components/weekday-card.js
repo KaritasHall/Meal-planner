@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { hoverAnimation } from "../animations";
 import Card from "../recipe-components/recipe-card";
 import {
   EmptyCardContainer,
@@ -17,7 +18,6 @@ export default function WeekdayCard({ weekday }) {
   than one recipe, which we are not. See how setMeal is being used -  we are only fetching 
   one object from the data.meals array */
   const [meal, setMeal] = useState(null);
-  console.log(Meal, meal);
 
   useEffect(() => {
     if (!Meal) {
@@ -40,20 +40,13 @@ export default function WeekdayCard({ weekday }) {
       </Link>
     );
   }
-
   return (
-    <>
-      <EmptyCardContainer
-        whileHover={{
-          scale: 1.05,
-        }}
-      >
-        <EmptyCardButtonLink to={`/recipes/${weekday}`}>
-          <EmptyCardButton>
-            <EmptyCardButtonLabel>+</EmptyCardButtonLabel>
-          </EmptyCardButton>
-        </EmptyCardButtonLink>
-      </EmptyCardContainer>
-    </>
+    <EmptyCardContainer {...hoverAnimation}>
+      <EmptyCardButtonLink to={`/recipes/${weekday}`}>
+        <EmptyCardButton>
+          <EmptyCardButtonLabel>+</EmptyCardButtonLabel>
+        </EmptyCardButton>
+      </EmptyCardButtonLink>
+    </EmptyCardContainer>
   );
 }
