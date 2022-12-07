@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const CardContainer = styled.div`
   display: flex;
@@ -6,7 +7,7 @@ export const CardContainer = styled.div`
   position: relative;
 `;
 
-export const RecipeCard = styled.div`
+export const RecipeCard = styled(motion.div)`
   cursor: pointer;
   width: 300px;
   height: 170px;
