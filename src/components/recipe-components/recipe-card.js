@@ -25,7 +25,7 @@ function Card({ recipe, hasRemove = false }) {
   }, [popup]);
 
   useEffect(() => {
-    /* Used the solution from french guy. The "active-popup" class is used in index.css */
+    /*The "active-popup" class is used in index.css */
     if (popup) {
       document.body.classList.add("active-popup");
     } else {

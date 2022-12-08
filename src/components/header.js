@@ -37,7 +37,7 @@ const Logo = styled.img`
     height: 45px;
   }
 
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1450px) {
     margin-top: 33px;
     margin-left: 168px;
     height: 45px;
