@@ -6,17 +6,15 @@
   --primary-orange: #fe6532;
   --primary-darkblue: #02195a;
   --primary-lightblue: #b0dafe;
-  /* --primary-darkblue: #1a398f; */
 }
 
 * {
   margin: 0;
-  /* box-sizing: border-box; */
 }
 
 body {
   margin: 0;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
