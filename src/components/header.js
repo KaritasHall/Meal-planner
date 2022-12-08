@@ -33,11 +33,17 @@ const Logo = styled.img`
 
   @media only screen and (min-width: 1024px) {
     margin-top: 33px;
+    margin-left: 90px;
+    height: 45px;
+  }
+
+  @media only screen and (min-width: 1500px) {
+    margin-top: 33px;
     margin-left: 168px;
     height: 45px;
   }
-  
-  @media only screen and (min-width: 1600px) {
+
+  @media only screen and (min-width: 2000px) {
     margin-top: 65px;
     margin-left: 350px;
     height: 60px;
@@ -53,7 +59,7 @@ const HeadlineContainer = styled.div`
 `;
 
 const PageHeadline = styled.h1`
-  font-family: 'Lobster Two', cursive;
+  font-family: "Lobster Two", cursive;
   color: white;
   font-size: 26px;
   text-align: center;
