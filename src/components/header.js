@@ -26,14 +26,21 @@ const Logo = styled.img`
   margin-left: 10px;
   height: 22px;
   @media only screen and (min-width: 690px) {
-    margin-top: 14px;
-    margin-left: 14px;
+    margin-top: 20px;
+    margin-left: 20px;
     height: 32px;
   }
+
+  @media only screen and (min-width: 1024px) {
+    margin-top: 33px;
+    margin-left: 168px;
+    height: 45px;
+  }
+  
   @media only screen and (min-width: 1600px) {
-    margin-top: 20px;
-    margin-left: 35px;
-    height: 50px;
+    margin-top: 65px;
+    margin-left: 350px;
+    height: 60px;
   }
 `;
 
@@ -53,15 +60,15 @@ const PageHeadline = styled.h1`
   margin-top: -7px;
   @media only screen and (min-width: 690px) {
     font-size: 32px;
-    margin-top: -9px;
+    margin-top: -15px;
   }
   @media only screen and (min-width: 1024px) {
     font-size: 40px;
-    margin-top: -16px;
+    margin-top: -48px;
   }
   @media only screen and (min-width: 1600px) {
     font-size: 50px;
-    margin-top: -9px;
+    margin-top: -60px;
   }
 `;
 

@@ -51,7 +51,7 @@ export const LandingContent = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    margin-top: 20px;
+    margin-top: 35px;
   }
 
   @media screen and (min-width: 2000px) {
@@ -155,10 +155,13 @@ export const LandingParagraph = styled.p`
     font-size: 20px;
   }
 
+  @media screen and (min-width: 768px) {
+    inline-size: 450px;
+  }
+
   @media screen and (min-width: 1024px) {
     margin-top: 64px;
     font-size: 22px;
-    inline-size: 230px;
     line-height: 30px;
   }
   @media screen and (min-width: 1600px) {
@@ -172,7 +175,7 @@ export const LandingParagraph = styled.p`
 export const FoodAnimation = styled(Lottie)`
   position: relative;
   max-height: 100%;
-  bottom: 70px;
+  bottom: 0px;
   transform: scale(1);
   @media screen and (min-width: 768px) {
     bottom: 0px;
@@ -267,7 +270,8 @@ export const AboutContainer = styled.div`
   @media screen and (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-left: 15px;
     margin-top: 0;
   }
   @media screen and (min-width: 1600px) {
@@ -288,6 +292,7 @@ export const AboutDescription = styled.p`
   line-height: 25px;
   @media screen and (min-width: 678px) {
     font-size: 20px;
+    inline-size: 250px;
   }
   @media screen and (min-width: 2000px) {
     font-size: 22px;
@@ -311,14 +316,12 @@ export const AboutContent = styled.div`
     border: none;
     &#about-chef {
       flex-direction: row-reverse;
-      border-right: solid 2px var(--primary-darkblue);
       @media screen and (min-width: 1600px) {
         border-right: none;
       }
     }
     &#about-shop {
       flex-direction: row-reverse;
-      border-left: solid 2px var(--primary-darkblue);
       @media screen and (min-width: 1600px) {
         border-left: none;
       }
